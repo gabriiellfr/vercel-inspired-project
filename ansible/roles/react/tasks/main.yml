@@ -1,0 +1,11 @@
+# ansible/roles/react/tasks/main.yml
+---
+- name: Start React Container
+  docker_container:
+      name: react-container
+      image: node:latest
+      state: started
+      command: 'bash -c "git clone {{ repo }} /app && cd /app && npm install --force && npm run build && npm run start"'
+      restart_policy: unless-stopped
+      ports:
+          - '3000:3000'

@@ -1,0 +1,26 @@
+<!-- app/templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vercel-Inspired Project</title>
+</head>
+<body>
+    <h1>Vercel-Inspired Project</h1>
+    <form action="/build" method="get">
+        <label for="repo">GitHub Repository:</label>
+        <input type="text" id="repo" name="repo" required>
+        <br>
+        <label for="type">Project Type:</label>
+        <select id="type" name="type" required>
+            <option value="react">React</option>
+            <option value="nodejs">Node.js</option>
+        </select>
+        <br>
+        <button type="submit">Build and Run</button>
+    </form>
+</body>
+</html>

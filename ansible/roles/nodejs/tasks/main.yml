@@ -1,0 +1,11 @@
+# ansible/roles/nodejs/tasks/main.yml
+---
+- name: Start Node.js Container
+  docker_container:
+      name: nodejs-container
+      image: node:latest
+      state: started
+      command: 'bash -c "git clone {{ repo }} /app && cd /app && npm install --force && npm run dev"'
+      restart_policy: unless-stopped
+      ports:
+          - '3001:3001'

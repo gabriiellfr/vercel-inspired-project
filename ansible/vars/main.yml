@@ -1,0 +1,5 @@
+# ansible/vars/main.yml
+
+dockerfiles_path: '/Users/gabrielsantos/Documents/GitHub/SRE/vercel-inspired-project-v2/docker'
+container_name: "{{ type }}-container-{{ lookup('pipe', 'date +%s') }}"
+project_image: '{{ type }}-project'
